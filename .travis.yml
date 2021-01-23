@@ -9,7 +9,7 @@ python:
 before_script:
   - sudo pip install -U sphinx
   - pip install recommonmark==0.7.1
-  
+
 script:
   - make html
   - touch docs/html/.nojekyll

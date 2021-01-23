@@ -1,5 +1,6 @@
 # License
-CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+
+## CERN Open Hardware Licence Version 2 - Strongly Reciprocal
 
 
 Preamble

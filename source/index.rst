@@ -14,7 +14,9 @@ Welcome to VTOl's documentation!
    LICENSE
 
 Please Refer:
+
 `Contributing Guidelines <https://prokuranepal.github.io/contributing_guidelines.html>`_
+
 `Code of Conduct <https://prokuranepal.github.io/code_of_conduct.html>`_
 
 Indices and tables

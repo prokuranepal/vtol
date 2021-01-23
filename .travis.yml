@@ -1,7 +1,4 @@
 sudo: true
-env:
-  global:
-
 language: python
 python:
   - "3.7"
@@ -17,7 +14,7 @@ script:
 #   - CI=false npm run build
 
 deploy:
-  - provider: pages
+  - provider: pages:git
     verbose: true
     github_token: $GITHUB_TOKEN
     edge: true

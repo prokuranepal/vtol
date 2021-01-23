@@ -1,0 +1,168 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VTOL &#8212; VTOL  documentation</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="LICENSE.html" />
+    <link rel="prev" title="Welcome to VTOl’s documentation!" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="LICENSE.html" title="&lt;no title&gt;"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to VTOl’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">VTOL  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">VTOL</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vtol">
+<h1>VTOL<a class="headerlink" href="#vtol" title="Permalink to this headline">¶</a></h1>
+<p>The current design poses difficulty during take-off and landing. One way to overcome this difficulty is to incorporate a system for vertical take-off and landing (VTOL).
+The simplest modification that can give the VTOL capability is the addition of quadcopter system.
+<img alt="image" src="_images/vtol_image.png" /></p>
+<p>The components that comprise of the quadcopter system are:</p>
+<ol class="simple">
+<li><p>Frame</p></li>
+<li><p>4 Brushless DC Motor with corresponding propellers, ESCs and wires</p></li>
+<li><p>Battery</p></li>
+</ol>
+<p>It is vital that weight added due to the modification is minimum as far as possible while giving the required strength. So, the process involved designing a basic lightweight frame, selecting motor and propeller considering the new weight and enhancing the structural strength in the subsequent iterations.</p>
+<p><img alt="image" src="_images/flowchart.png" /></p>
+<div class="section" id="design-of-airframe">
+<h2>Design of airframe<a class="headerlink" href="#design-of-airframe" title="Permalink to this headline">¶</a></h2>
+<p>Following are the most important criteria to consider during design of airframe.</p>
+<ol class="simple">
+<li><p>The rear propeller do not interfere with the pusher prop</p></li>
+<li><p>The forward as well as rear propeller do not interfere with the fuselage and/or the wings.</p></li>
+<li><p>Distance of the propeller from the UAV CG be as minimum as possible to reduce bending stress at wing-fuselage joint.
+The following drawing pertains to the wing-airframe connection for the modification.
+<img alt="image" src="_images/3dprinted.png" /></p></li>
+</ol>
+</div>
+<div class="section" id="selection-of-motor-and-propeller">
+<h2>Selection of motor and propeller<a class="headerlink" href="#selection-of-motor-and-propeller" title="Permalink to this headline">¶</a></h2>
+<p>The motor- propeller combination that would give the thrust to lift-off the gross weight of the UAV was considered. One that was suitable was found to be Foxtech Motor S4016 KV380 V2. The propeller used was 15’’ propeller.<table><th>Motor</th><th>Propeller</th><th>Battery</th><tr><td>Foxtech  S4016 KV380 V2.</td><td>15”</td><td>4 Cell lipo</td></tr></table></p>
+<p>The following is a result of lab test of the motor-propeller combination.
+<img alt="image" src="_images/graph.png" />
+When each motor draw about 21.36 A current, the thrust to weight ratio is 1.8. Considering the quadcopter configuration will only help in take-off and gain of initial cruise speed and because there is room for more thrust gain by increasing current input, this motor- propeller combination is chosen.</p>
+</div>
+<div class="section" id="selection-of-battery">
+<h2>Selection of battery<a class="headerlink" href="#selection-of-battery" title="Permalink to this headline">¶</a></h2>
+<p>4cell to -6 cell LiPo battery was found to be suitable for the operation.
+Weight Estimate</p>
+<table><th>S.N.</th><th>Component</th><th>Unit</th><th>Weight</th><tr><td>1.</td><td>16OD x 14MM ID x 1000MM carbon tube </td> <td>2</td><td></td></tr><tr><td>2.</td><td>Foxtech  S4016 KV380</td><td>4</td><td></td></tr><tr><td>3.</td><td>ESC</td><td>4</td><td></td></tr><tr><td>4.</td><td>Wires</td><td>4 set</td><td></td></tr><tr><td>5.</td><td>Motor Mountings</td><td>4</td><td></td></tr>
+</table><p>Weight of the UAV with VTOL incorporated: 4800 gram
+Structural Analysis
+Geometric model:
+<img alt="image" src="_images/analysis.png" />
+<code class="docutils literal notranslate"><span class="pre">Geometric</span> <span class="pre">model</span> <span class="pre">for</span> <span class="pre">analysis</span> <span class="pre">(only</span> <span class="pre">one</span> <span class="pre">half</span> <span class="pre">shown)</span></code></p>
+</div>
+<div class="section" id="material">
+<h2>Material:<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h2>
+<p>The quadcopter airframe consist of two 16OD x 14MM ID x 1000MM  carbon tube. The two wing spars are also carbon tube. The wing spar-frame spar connectors are 3D printed parts from Acrylonitrile butadiene styrene (ABS). However, the material for the mount was also taken as carbon fiber for ease of analysis as exact figures for property of ABS were unavailable.</p>
+<table><th>Material </th><th>Property</th><th>Value</th><tr><td ROWSPAN="3">Carbon Fiber</td><td >Density</td><td >1600 Kg/m^3</td></tr><tr><td>Tensile Strength</td><td>2550 MPa</td></tr><tr><td>Young’s Modulus</td><td>135 GPa</td></tr><tr></tr><tr></tr></table><p><b>Post Processing:</b>
+Stress and deformation under the action of gravity and thrust force were observed. For this the wing spar were constrained as fixed support. Thrust force of 30 N (considering thrust to weight ratio of 2.5 to be upper limit for the operation) was applied for analysis.
+<img alt="_images/analysis2.png" src="_images/analysis2.png" />
+It is observed that the addition of the quadcopter system doesn’t add considerably to the stress at the wing-fuselage joint. Also, the wing-tip deflection is not so high at normal thrust condition (15.6 mm at 20N thrust per motor). This provided a favorable condition for the quadcopter system installation.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">VTOL</a><ul>
+<li><a class="reference internal" href="#design-of-airframe">Design of airframe</a></li>
+<li><a class="reference internal" href="#selection-of-motor-and-propeller">Selection of motor and propeller</a></li>
+<li><a class="reference internal" href="#selection-of-battery">Selection of battery</a></li>
+<li><a class="reference internal" href="#material">Material:</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to VTOl’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="LICENSE.html"
+                        title="next chapter">&lt;no title&gt;</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/introduction.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="LICENSE.html" title="&lt;no title&gt;"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to VTOl’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">VTOL  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">VTOL</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Prokura Innovations Pvt. Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

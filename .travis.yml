@@ -1,0 +1,27 @@
+sudo: true
+env:
+  global:
+
+language: python
+python:
+  - "3.7"
+
+before_script:
+  - sudo pip install -U sphinx
+  - pip install recommonmark==0.7.1
+  
+script:
+  - make html
+  - touch docs/html/.nojekyll
+  - touch docs/.nojekyll
+#   - CI=false npm run build
+
+deploy:
+  - provider: pages
+    verbose: true
+    github_token: $GITHUB_TOKEN
+    edge: true
+    local_dir: ./docs/html/
+    keep_history: true
+    on:
+      branch: master
